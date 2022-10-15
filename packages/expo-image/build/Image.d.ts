@@ -11,9 +11,15 @@ export interface ImageProps extends AccessibilityProps {
     loadingIndicatorSource?: ImageSourcePropType | null;
     resizeMode?: ImageResizeMode;
     /**
-     * @Android only
+     * The radius of the blur applied to the image.
+     * @default 0
      */
     blurRadius?: number;
+    /**
+     * Changes all non-transparent pixels to the given color.
+     * @default null
+     */
+    tintColor?: string | null;
     fadeDuration?: number;
     onLoadStart?: () => void;
     onProgress?: (event: NativeSyntheticEvent<ImageLoadProgressEventData>) => void;
